@@ -8,6 +8,7 @@ import { RadioComponent } from './radio/radio.component'
 import { RatingComponent } from './rating/rating.component'
 
 import { BaselayerService } from '../baselayers/baselayer/baselayer.service'
+import { PluginService } from '../plugins/plugin/plugin.service'
 import { NotificationService } from '../shared/messages/notification.service'
 import { ConfirmService } from './confirm/confirm.service'
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
@@ -21,7 +22,7 @@ export class SharedModule{
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [BaselayerService, NotificationService, ConfirmService]
+            providers: [BaselayerService, NotificationService, ConfirmService, PluginService]
         }
     }
 }

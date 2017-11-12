@@ -8,7 +8,7 @@ import { BaselayerComponent } from './baselayers/baselayer/baselayer.component'
 import { BaselayerDetailComponent } from './baselayers/baselayer-detail/baselayer-detail.component'
 import { CompanyComponent } from './company/company.component'
 import { ContextComponent } from './context/context.component'
-import { PluginComponent } from './plugin/plugin.component'
+import { PluginsComponent } from './plugins/plugins.component'
 import { UserComponent } from './user/user.component'
 
 export const ROUTES: Routes = [
@@ -20,7 +20,7 @@ export const ROUTES: Routes = [
   {path: 'baselayer-detail', component: BaselayerDetailComponent},
   {path: 'company', component: CompanyComponent},
   {path: 'context', component: ContextComponent},
-  {path: 'plugin', component: PluginComponent},
+  {path: 'plugins', component: PluginsComponent},
   {path: 'user', component: UserComponent},
   {path: '**', component: NotFoundComponent}
 ]

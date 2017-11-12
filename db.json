@@ -24,5 +24,6 @@
       "script": "new OpenLayers.Layer.Google( \"Google Terrain\" ,  {type : google.maps.MapTypeId.TERRAIN , numZoomLevels : 20} )",
       "imagePath": "https://s3.amazonaws.com/leapmind/contextManager/common/img/googleRelief.png"
     }
-  ]
+  ],
+  "plugin": []
 }

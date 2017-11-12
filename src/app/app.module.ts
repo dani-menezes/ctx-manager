@@ -16,11 +16,12 @@ import { SharedModule } from './shared/shared.module'
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContextComponent } from './context/context.component';
 import { CompanyComponent } from './company/company.component';
-import { PluginComponent } from './plugin/plugin.component';
+import { PluginComponent } from './plugins/plugin/plugin.component';
 import { BaselayersComponent } from './baselayers/baselayers.component';
 import { UserComponent } from './user/user.component';
 import { BaselayerComponent } from './baselayers/baselayer/baselayer.component';
 import { BaselayerDetailComponent } from './baselayers/baselayer-detail/baselayer-detail.component';
+import { PluginsComponent } from './plugins/plugins.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BaselayerDetailComponent } from './baselayers/baselayer-detail/baselaye
     BaselayersComponent,
     UserComponent,
     BaselayerComponent,
-    BaselayerDetailComponent
+    BaselayerDetailComponent,
+    PluginsComponent
   ],
   imports: [
     BrowserModule,
