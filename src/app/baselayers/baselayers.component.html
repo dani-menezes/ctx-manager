@@ -1,0 +1,37 @@
+<section class="content-header">
+    <h1>
+      Baselayers
+      <span class="pull-right">
+          <a class="ctx-icon-button" [routerLink]="['/baselayer-detail']" title="Adicionar">
+            <i class="fa fa-plus-square"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a class="search-link" (click)="toggleSearch()">
+            <span *ngIf="iptSearch.value">
+              <small>{{iptSearch.value}}</small>&nbsp;
+            </span>
+            <i class="fa fa-search"></i>
+          </a>
+      </span>
+    </h1>
+    <div class="row">
+      <div class="col-xs-12 search-bar" [@toggleSearch]="searchBarState">
+          <form [formGroup]="searchForm">
+              <div class="form-group">
+                  <input type="text" #iptSearch formControlName="searchControl" class="form-control" placeholder="Pesquisa">
+              </div>
+          </form>
+      </div>
+    </div>
+  </section> 
+  
+  <section class="content">
+    <div class="row">
+      <div *ngFor="let baselayer of baselayers" class="col-sm-6 col-xs-12">
+        <ctx-baselayer [baselayer]="baselayer"></ctx-baselayer>
+      </div>
+      <div *ngIf="baselayers?.length === 0" class="col-xs-12">
+        <p class="lead text-center">Não foram encontrados itens para a sua busca</p>
+      </div>
+    </div>
+  </section>

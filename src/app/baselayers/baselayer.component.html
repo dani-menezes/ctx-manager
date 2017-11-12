@@ -1,0 +1,10 @@
+<a [routerLink]="['/baselayer', baselayer.id]">
+  <div class="place-info-box" [@baselayerAppeared]="baselayerState">
+    <span class="place-info-box-icon"><img  [src]="baselayer.imagePath" /></span>
+
+    <div class="place-info-box-content">
+      <span class="place-info-box-text">{{baselayer.name}}</span>
+      <span class="place-info-box-detail">{{baselayer.script}}</span>
+    </div>
+  </div>
+</a>

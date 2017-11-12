@@ -1,0 +1,28 @@
+{
+  "baselayer": [
+    {
+      "id": 0,
+      "name": "Google Hybrid",
+      "script": "new OpenLayers.Layer.Google ( \"Google Hybrid\",  {type : google.maps.MapTypeId.HYBRID, numZoomLevels : 20} )",
+      "imagePath": "https://s3.amazonaws.com/leapmind/contextManager/common/img/googleHybrid.png"
+    },
+    {
+      "id": 1,
+      "name": "Google Streets",
+      "script": "new OpenLayers.Layer.Google( \"Google Streets\" , {numZoomLevels : 20} )",
+      "imagePath": "https://s3.amazonaws.com/leapmind/contextManager/common/img/googleStreets.png"
+    },
+    {
+      "id": 3,
+      "name": "OpenStreetMap",
+      "script": "new OpenLayers.Layer.OSM(\"\")",
+      "imagePath": "https://s3.amazonaws.com/leapmind/contextManager/common/img/openStreetMap.png"
+    },
+    {
+      "id": 4,
+      "name": "Google Terrain",
+      "script": "new OpenLayers.Layer.Google( \"Google Terrain\" ,  {type : google.maps.MapTypeId.TERRAIN , numZoomLevels : 20} )",
+      "imagePath": "https://s3.amazonaws.com/leapmind/contextManager/common/img/googleRelief.png"
+    }
+  ]
+}

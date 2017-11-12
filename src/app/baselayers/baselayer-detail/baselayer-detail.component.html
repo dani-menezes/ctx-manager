@@ -1,0 +1,55 @@
+<!--INICIO DO CONTEUDO-->
+<section class="content-header">
+</section>
+
+<section class="content">
+  <section class="invoice">
+
+    <!-- {{form.valid}}<br>
+    {{form.value | json}} -->
+    <form *ngIf="baselayerForm" novalidate [formGroup]="baselayerForm">
+        <div class="row">
+            <div class="col-xs-12">
+              <h2 class="page-header">
+                <!-- <i class="fa fa-shopping-cart"></i> --> Informações da baselayer
+              </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 5 caracteres" label="Nome">
+                    <input class="form-control" formControlName="name" autocomplete="off" placeholder="Nome da baselayer" />
+                </ctx-input-container>
+            </div>
+            <div class="col-sm-8 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 5 caracteres" label="Imagem">
+                    <input class="form-control" formControlName="imagePath" autocomplete="off" placeholder="Caminho da imagem" />
+                </ctx-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório" label="Script">
+                    <textarea rows="3" class="form-control" formControlName="script" autocomplete="off" placeholder="Script"></textarea>
+                </ctx-input-container>
+            </div>
+        </div>
+
+        <div class="row">
+            <input [hidden]="true" formControlName="id"/>
+            <div class="col-xs-12">
+              <h2 class="page-footer">
+                    <button [routerLink]="['/baselayers']" class="btn btn-danger btn-flat pull-left" >
+                        <i class="fa fa-times"></i>&nbsp;&nbsp;Cancelar
+                    </button>  
+                    <button [routerLink]="['/baselayers']" class="btn btn-success btn-flat pull-right" 
+                            [disabled]="!baselayerForm.valid"
+                            (click)="saveOrUpdate(baselayerForm.value)"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Salvar
+                    </button>   
+              </h2>
+            </div>
+        </div>
+    </form>
+  </section>
+</section>
