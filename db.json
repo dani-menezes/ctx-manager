@@ -25,5 +25,41 @@
       "imagePath": "https://s3.amazonaws.com/leapmind/contextManager/common/img/googleRelief.png"
     }
   ],
-  "plugin": []
+  "plugin": [
+    {
+      "id": 0,
+      "name": "Layer upload",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    },
+    {
+      "id": 1,
+      "name": "Layer customize",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    },
+    {
+      "id": 2,
+      "name": "Presentation",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    },
+    {
+      "id": 3,
+      "name": "Print",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    },
+    {
+      "id": 4,
+      "name": "Document Upload",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    },
+    {
+      "id": 5,
+      "name": "Shape Download",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    },
+    {
+      "id": 6,
+      "name": "Geolocation",
+      "locationPath": "s3.amazon.com.region/bucket/location/file.js"
+    }
+  ]
 }

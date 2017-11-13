@@ -22,6 +22,7 @@ import { UserComponent } from './user/user.component';
 import { BaselayerComponent } from './baselayers/baselayer/baselayer.component';
 import { BaselayerDetailComponent } from './baselayers/baselayer-detail/baselayer-detail.component';
 import { PluginsComponent } from './plugins/plugins.component';
+import { PluginDetailComponent } from './plugins/plugin-detail/plugin-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PluginsComponent } from './plugins/plugins.component';
     UserComponent,
     BaselayerComponent,
     BaselayerDetailComponent,
-    PluginsComponent
+    PluginsComponent,
+    PluginDetailComponent
   ],
   imports: [
     BrowserModule,

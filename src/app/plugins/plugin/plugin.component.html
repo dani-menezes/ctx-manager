@@ -1,11 +1,11 @@
 <ctx-confirm></ctx-confirm>
-<div class="place-info-box" [@pluginAppeared]="pluginState">
-  <div class="place-info-box-content">
-    <p class="place-info-box-text">{{plugin.name}}
+<div class="plugin-box" [@pluginAppeared]="pluginState" title="{{plugin.name}}">
+  <div class="plugin-box-content">
+    <p class="plugin-box-text">{{plugin.name.length > 17  ? plugin.name.substr(0, 14) + "..." : plugin.name}}
           <span class="pull-right">
-              <a [routerLink]="['/plugin-detail', plugin.id]" class="ctx-icon-button"><i class="fa fa-pencil"></i></a>
+              <a [routerLink]="['/plugin-detail', plugin.id]" class="ctx-icon-button" title="Editar"><i class="fa fa-pencil"></i></a>
               &nbsp;
-              <a (click)="delete(plugin.id, plugin.name)" class="ctx-icon-button"><i class="fa fa-trash"></i></a>
+              <a (click)="delete(plugin.id, plugin.name)" class="ctx-icon-button" title="Remover"><i class="fa fa-trash"></i></a>
           </span>
     </p>
   </div>

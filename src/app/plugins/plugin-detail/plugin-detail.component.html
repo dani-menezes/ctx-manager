@@ -2,7 +2,7 @@
 <section class="content-header">
     <ol class="breadcrumb ctx-breadcumb">
         <li><a href="/"><i class="fa fa-home"></i> Context Manager</a></li>
-        <li><a href="/baselayers"><i class="fa fa-map-o"></i> Baselayers</a></li>
+        <li><a href="/plugins"><i class="fa fa-gears"></i> Plugins</a></li>
         <li class="active"><i class="fa fa-bars"></i> Detail</li>
     </ol>
 </section>
@@ -12,11 +12,11 @@
 
     <!-- {{form.valid}}<br>
     {{form.value | json}} -->
-    <form *ngIf="baselayerForm" novalidate [formGroup]="baselayerForm">
+    <form *ngIf="pluginForm" novalidate [formGroup]="pluginForm">
         <div class="row">
             <div class="col-xs-12">
               <h2 class="page-header">
-                Informações da baselayer
+                <!-- <i class="fa fa-shopping-cart"></i> --> Informações do Plugin
               </h2>
             </div>
         </div>
@@ -24,19 +24,12 @@
         <div class="row">
             <div class="col-sm-4 col-xs-12">
                 <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 5 caracteres" label="Nome">
-                    <input class="form-control" formControlName="name" autocomplete="off" placeholder="Nome da baselayer" />
+                    <input class="form-control" formControlName="name" autocomplete="off" placeholder="Nome do plugin" />
                 </ctx-input-container>
             </div>
             <div class="col-sm-8 col-xs-12">
                 <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 5 caracteres" label="Imagem">
-                    <input class="form-control" formControlName="imagePath" autocomplete="off" placeholder="Caminho da imagem" />
-                </ctx-input-container>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-xs-12">
-                <ctx-input-container errorMessage="Campo obrigatório" label="Script">
-                    <textarea rows="3" class="form-control" formControlName="script" autocomplete="off" placeholder="Script"></textarea>
+                    <input class="form-control" formControlName="locationPath" autocomplete="off" placeholder="Caminho do plugin" />
                 </ctx-input-container>
             </div>
         </div>
@@ -45,12 +38,12 @@
             <input [hidden]="true" formControlName="id"/>
             <div class="col-xs-12">
               <h2 class="page-footer">
-                    <button [routerLink]="['/baselayers']" class="btn btn-danger btn-flat pull-left" >
+                    <button [routerLink]="['/plugins']" class="btn btn-danger btn-flat pull-left" >
                         <i class="fa fa-times"></i>&nbsp;&nbsp;Cancelar
                     </button>  
-                    <button [routerLink]="['/baselayers']" class="btn btn-success btn-flat pull-right" 
-                            [disabled]="!baselayerForm.valid"
-                            (click)="saveOrUpdate(baselayerForm.value)"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Salvar
+                    <button [routerLink]="['/plugins']" class="btn btn-success btn-flat pull-right" 
+                            [disabled]="!pluginForm.valid"
+                            (click)="saveOrUpdate(pluginForm.value)"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Salvar
                     </button>   
               </h2>
             </div>

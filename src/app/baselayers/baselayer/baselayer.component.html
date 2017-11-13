@@ -1,13 +1,13 @@
 <ctx-confirm></ctx-confirm>
-<div class="place-info-box" [@baselayerAppeared]="baselayerState">
+<div class="place-info-box" [@baselayerAppeared]="baselayerState" title="{{baselayer.name}}">
   <span class="place-info-box-icon baselayer-img" ><img width="120px" height="100px" [src]="baselayer.imagePath" /></span>
 
   <div class="place-info-box-content">
     <p class="place-info-box-text">{{baselayer.name}}
           <span class="pull-right">
-              <a [routerLink]="['/baselayer-detail', baselayer.id]" class="ctx-icon-button"><i class="fa fa-pencil"></i></a>
+              <a [routerLink]="['/baselayer-detail', baselayer.id]" class="ctx-icon-button" title="Editar"><i class="fa fa-pencil"></i></a>
               &nbsp;
-              <a (click)="delete(baselayer.id, baselayer.name)" class="ctx-icon-button"><i class="fa fa-trash"></i></a>
+              <a (click)="delete(baselayer.id, baselayer.name)" class="ctx-icon-button" title="Remover"><i class="fa fa-trash"></i></a>
           </span>
     </p>
     <span class="place-info-box-detail">{{baselayer.script.length > 50 ? baselayer.script.substr(0, 47) + "..." : baselayer.script}}</span>

@@ -1,6 +1,8 @@
 export class Plugin {
-    id: number
+    
+    id: any
     name: string
+    locationPath: string
 
     constructor(){}
 }

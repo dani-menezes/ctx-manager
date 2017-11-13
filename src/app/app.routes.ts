@@ -10,6 +10,8 @@ import { CompanyComponent } from './company/company.component'
 import { ContextComponent } from './context/context.component'
 import { PluginsComponent } from './plugins/plugins.component'
 import { UserComponent } from './user/user.component'
+import { PluginComponent } from './/plugins/plugin/plugin.component';
+import { PluginDetailComponent } from './plugins/plugin-detail/plugin-detail.component';
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +23,9 @@ export const ROUTES: Routes = [
   {path: 'company', component: CompanyComponent},
   {path: 'context', component: ContextComponent},
   {path: 'plugins', component: PluginsComponent},
+  {path: 'plugin/:id', component: PluginComponent},
+  {path: 'plugin-detail/:id', component: PluginDetailComponent},
+  {path: 'plugin-detail', component: PluginDetailComponent},
   {path: 'user', component: UserComponent},
   {path: '**', component: NotFoundComponent}
 ]

@@ -1,6 +1,10 @@
 <section class="content-header">
+  <ol class="breadcrumb ctx-breadcumb">
+    <li><a href="/"><i class="fa fa-home"></i> Context Manager</a></li>
+    <li class="active"><i class="fa fa-gears"></i> Plugins</li>
+  </ol>
   <h1>
-    Plugins
+    <i class="fa fa-gears"></i> Plugins
     <span class="pull-right">
         <a class="ctx-icon-button" [routerLink]="['/plugin-detail']" title="Adicionar">
           <i class="fa fa-plus-square"></i>
@@ -27,7 +31,7 @@
 
 <section class="content">
   <div class="row">
-    <div *ngFor="let plugin of plugins" class="col-sm-6 col-xs-12">
+    <div *ngFor="let plugin of plugins" class="col-sm-4 col-xs-12">
       <ctx-plugin [plugin]="plugin"></ctx-plugin>
     </div>
     <div *ngIf="plugins?.length === 0" class="col-xs-12">
