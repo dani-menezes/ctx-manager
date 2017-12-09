@@ -1,8 +1,0 @@
-{
-    "/api/company" : {
-        "target" : "http://localhost:8080/ctxmanager/company",
-        "secure" : false,
-        "logLevel" : "debug",
-        "changeOrigin": true
-    }
-}
