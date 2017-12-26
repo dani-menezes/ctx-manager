@@ -31,11 +31,12 @@
   
   <section class="content">
     <div class="row">
-      <div *ngFor="let baselayer of baselayers" class="col-sm-6 col-xs-12">
-        <ctx-baselayer [baselayer]="baselayer"></ctx-baselayer>
+      <div *ngFor="let baselayer of this.baselayers" class="col-sm-6 col-xs-12">
+        <ctx-baselayer (reloadEntities)="this.retrieveEntities()" [baselayer]="baselayer"></ctx-baselayer>
       </div>
       <div *ngIf="baselayers?.length === 0" class="col-xs-12">
         <p class="lead text-center">Não foram encontrados itens para a sua busca</p>
       </div>
     </div>
   </section>
+

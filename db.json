@@ -1,4 +1,20 @@
 {
+  "company": [
+    {
+      "id": 0,
+      "name": "Leapmind",
+      "key": "leapmind",
+      "workspace": "http://geodados.coffey.com.br/geoserver/leapmind/wms",
+      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/leapmind/img/logo_background_white.png"
+    },
+    {
+      "id": 1,
+      "name": "Tetra Tech",
+      "key": "ttech",
+      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
+      "workspace": "http://geodados.coffey.com.br/geoserver/ttech/wms"
+    }
+  ],
   "baselayer": [
     {
       "id": 0,

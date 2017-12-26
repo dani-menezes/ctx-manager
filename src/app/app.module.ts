@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module'
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContextComponent } from './context/context.component';
-import { CompanyComponent } from './company/company.component';
+import { CompanyComponent } from './companies/company/company.component';
 import { PluginComponent } from './plugins/plugin/plugin.component';
 import { BaselayersComponent } from './baselayers/baselayers.component';
 import { UserComponent } from './user/user.component';
@@ -23,6 +23,8 @@ import { BaselayerComponent } from './baselayers/baselayer/baselayer.component';
 import { BaselayerDetailComponent } from './baselayers/baselayer-detail/baselayer-detail.component';
 import { PluginsComponent } from './plugins/plugins.component';
 import { PluginDetailComponent } from './plugins/plugin-detail/plugin-detail.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { CompanyDetailComponent } from './companies/company-detail/company-detail.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { PluginDetailComponent } from './plugins/plugin-detail/plugin-detail.com
     BaselayerComponent,
     BaselayerDetailComponent,
     PluginsComponent,
-    PluginDetailComponent
+    PluginDetailComponent,
+    CompaniesComponent,
+    CompanyDetailComponent
   ],
   imports: [
     BrowserModule,

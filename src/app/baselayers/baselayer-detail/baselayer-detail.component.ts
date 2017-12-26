@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms'
 import { Router, ActivatedRoute } from '@angular/router'
 
 import { Baselayer } from '../baselayer/baselayer.model'
 import { BaselayerService } from '../baselayer/baselayer.service'
 import { BaseAnimationRenderer } from '@angular/platform-browser/animations/src/animation_renderer';
+import { BaselayerComponent } from 'app/baselayers/baselayer/baselayer.component';
 
 @Component({
   selector: 'ctx-baselayer-detail',
@@ -12,6 +13,8 @@ import { BaseAnimationRenderer } from '@angular/platform-browser/animations/src/
   styleUrls: ['./baselayer-detail.component.css']
 })
 export class BaselayerDetailComponent implements OnInit {
+
+  @Output() reloadEntities = new EventEmitter();
 
   baselayerForm: FormGroup
   constructor(private baselayerService: BaselayerService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) { }
@@ -28,7 +31,6 @@ export class BaselayerDetailComponent implements OnInit {
   }
 
   buildForm(baselayer?) {
-    console.log('baselayer', baselayer)
     this.baselayerForm = this.formBuilder.group({
       id: this.formBuilder.control(baselayer?baselayer.id:''),
       name: this.formBuilder.control(baselayer?baselayer.name:'', [Validators.required, Validators.minLength(5)]),

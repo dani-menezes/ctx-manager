@@ -12,6 +12,7 @@ import { PluginService } from '../plugins/plugin/plugin.service'
 import { NotificationService } from '../shared/messages/notification.service'
 import { ConfirmService } from './confirm/confirm.service'
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
+import { CompanyService } from 'app/companies/company/company.service';
 
 @NgModule({
     declarations: [ InputComponent, RadioComponent, RatingComponent, SnackbarComponent, ConfirmComponent ],
@@ -22,7 +23,7 @@ export class SharedModule{
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [BaselayerService, NotificationService, ConfirmService, PluginService]
+            providers: [BaselayerService, CompanyService, ConfirmService, NotificationService, PluginService]
         }
     }
 }

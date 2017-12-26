@@ -1,4 +1,4 @@
-import { Company } from '../company/company.model'
+import { Company } from '../companies/company/company.model'
 
 export interface Context {
     // dependencies

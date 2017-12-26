@@ -1,0 +1,24 @@
+<ctx-confirm></ctx-confirm>
+<div class="place-info-box" [@companyAppeared]="companyState" title="{{company.name}}">
+  <div class="place-img-box">
+      <span class="place-info-box-icon company-img" ><img [src]="company.logoPath" /></span>
+  </div>
+
+  <div class="place-info-box-content">
+    <div>
+        <p class="place-info-box-text">{{company.name}}
+            <span class="pull-right">
+                <a [routerLink]="['/company-detail', company.id]" class="ctx-icon-button" title="Editar"><i class="fa fa-pencil"></i></a>
+                &nbsp;
+                <a (click)="delete(company.id, company.name)" class="ctx-icon-button" title="Remover"><i class="fa fa-trash"></i></a>
+            </span>
+        </p>
+    </div>
+    <div>
+      <span>{{company.workspace}}</span>
+    </div>
+    <div>
+        <span>{{company.key}}</span>
+    </div>
+  </div>
+</div>
