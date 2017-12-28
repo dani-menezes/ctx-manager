@@ -14,7 +14,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module'
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ContextComponent } from './context/context.component';
 import { CompanyComponent } from './companies/company/company.component';
 import { PluginComponent } from './plugins/plugin/plugin.component';
 import { BaselayersComponent } from './baselayers/baselayers.component';
@@ -25,6 +24,9 @@ import { PluginsComponent } from './plugins/plugins.component';
 import { PluginDetailComponent } from './plugins/plugin-detail/plugin-detail.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { CompanyDetailComponent } from './companies/company-detail/company-detail.component';
+import { ContextsComponent } from 'app/contexts/contexts.component';
+import { ContextComponent } from 'app/contexts/context/context.component';
+import { ContextDetailComponent } from 'app/contexts/context-detail/context-detail.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,10 @@ import { CompanyDetailComponent } from './companies/company-detail/company-detai
     PluginsComponent,
     PluginDetailComponent,
     CompaniesComponent,
-    CompanyDetailComponent
+    CompanyDetailComponent,
+    ContextsComponent,
+    ContextComponent,
+    ContextDetailComponent
   ],
   imports: [
     BrowserModule,

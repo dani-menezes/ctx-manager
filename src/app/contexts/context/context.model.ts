@@ -1,10 +1,10 @@
-import { Company } from '../companies/company/company.model'
+import { Company } from 'app/companies/company/company.model'
 
 export interface Context {
     // dependencies
     company: Company
     // attributes
-    id: number
+    id: any
     colorBg: string
     colorMn: string
     colorFn: string

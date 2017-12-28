@@ -1,15 +1,6 @@
-.place-info-box {
-    min-height: 100px;
-}
 .place-info-box-content {
     padding: 5px 10px;
-    margin-left: 155px;
-}
-.place-img-box{
-    vertical-align: middle;
-}
-.workspace-label{
-    max-width: 150px;
+    margin-left: 10px;
 }
 .place-info-box-text {
     display: block;
@@ -32,14 +23,6 @@
     width: 100%;
     float: left;
 }
-.place-info-box-icon {
-    width: 150px;
-    height: 90px;
-    vertical-align: middle;
-    text-align: center;
-    background-color: white;
-}
-.company-img {
-    margin-top: 8px;
-    margin-left: 8px;
+.colorSpan {
+    width: 35px;
 }

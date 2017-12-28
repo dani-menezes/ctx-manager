@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations'
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms'
 
-import { Company } from './company/company.model'
-import { CompanyService } from './company/company.service'
+import { Context } from './context/context.model'
+import { ContextService } from './context/context.service'
 import { Observable } from 'rxjs/Observable'
 
 import 'rxjs/add/operator/switchMap'
@@ -14,9 +14,9 @@ import 'rxjs/add/operator/catch'
 import 'rxjs/add/observable/from'
 
 @Component({
-  selector: 'ctx-companies',
-  templateUrl: './companies.component.html',
-  styleUrls: ['./companies.component.css'],
+  selector: 'ctx-contexts',
+  templateUrl: './contexts.component.html',
+  styleUrls: ['./contexts.component.css'],
   animations: [
     trigger('toggleSearch', [
       state('hidden', style({opacity: 0, "max-height": "0px"})),
@@ -24,14 +24,14 @@ import 'rxjs/add/observable/from'
       transition ('* => *', animate ('250ms 0s ease-in-out'))
   ])]
 })
-export class CompaniesComponent implements OnInit {
+export class ContextsComponent implements OnInit {
 
   searchBarState = 'hidden'
-  companies: Company[]
+  contexts: Context[]
   searchForm: FormGroup
   searchControl: FormControl
 
-  constructor(private companyService: CompanyService, private fb: FormBuilder){
+  constructor(private contextService: ContextService, private fb: FormBuilder){
     this.ngOnInit();
   }
 
@@ -45,9 +45,9 @@ export class CompaniesComponent implements OnInit {
       .distinctUntilChanged()
       // .do(searchTerm => console.log(`q=${searchTerm}`))
       .switchMap(searchTerm => 
-          this.companyService.findAll(searchTerm).catch(error=>Observable.from([]))
+          this.contextService.findAll(searchTerm).catch(error=>Observable.from([]))
       )
-      .subscribe(companies => this.companies = companies)
+      .subscribe(contexts => this.contexts = contexts)
     this.retrieveEntities();
   }
 
@@ -56,11 +56,11 @@ export class CompaniesComponent implements OnInit {
   }
  
   retrieveEntities() {
-    console.log('companys:retrieveEntities[' + (this.companies?this.companies.length:0)+']')
+    console.log('contexts:retrieveEntities[' + (this.contexts?this.contexts.length:0)+']')
     setTimeout(() => {
-      this.companyService.findAll().subscribe(companies => {
-        this.companies = companies
-        console.log('companys:subscribe[' + (this.companies?this.companies.length:0)+']')
+      this.contextService.findAll().subscribe(contexts => {
+        this.contexts = contexts
+        console.log('contexts:subscribe[' + (this.contexts?this.contexts.length:0)+']')
       }) 
     }, 500);
   }
