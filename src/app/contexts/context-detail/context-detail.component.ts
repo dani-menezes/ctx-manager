@@ -8,6 +8,7 @@ import { ContextService } from 'app/contexts/context/context.service';
 import { Context } from 'app/contexts/context/context.model';
 import { Company } from 'app/companies/company/company.model';
 import { getComponent } from '@angular/core/src/linker/component_factory_resolver';
+import { CompanyService } from 'app/companies/company/company.service';
 
 @Component({
   selector: 'ctx-context-detail',
@@ -18,24 +19,10 @@ export class ContextDetailComponent implements OnInit {
 
   contextForm: FormGroup
   companies: Company[]
-  constructor(private contextservice: ContextService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private contextservice: ContextService, private companyService: CompanyService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.companies = [
-      {
-        id: 0,
-        name: "Leapmind",
-        key: "leapmind",
-        workspace: "",
-        logoPath: ""
-      },{
-        id: 1,
-        name: "Tetra Tech",
-        key: "ttech",
-        workspace: "",
-        logoPath: ""
-      }
-    ]
+    this.findAllCompanies();
     let id = this.route.snapshot.params['id']
     if (id === undefined) {
       this.buildForm()
@@ -81,4 +68,8 @@ export class ContextDetailComponent implements OnInit {
     return null;
   }
 
+  findAllCompanies() {
+    this.companyService.findAll().subscribe(companies => this.companies = companies);
+  }
 }
+

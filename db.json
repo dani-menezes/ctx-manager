@@ -15,7 +15,7 @@
         "logoPath": ""
       },
       "colorBg": "#10db13",
-      "colorMn": "#fdfefd",
+      "colorMn": "#1a58f2",
       "colorFn": "#050303"
     },
     {
@@ -35,6 +35,24 @@
       "colorBg": "#f2f906",
       "colorMn": "#091816",
       "colorFn": "#fdfefd"
+    },
+    {
+      "id": 3,
+      "name": "Novo Context",
+      "maxY": "1234123412344",
+      "minX": "123412341234",
+      "maxX": "634563456345634",
+      "minY": "1543523452345",
+      "company": {
+        "id": 1,
+        "name": "Tetra Tech",
+        "key": "ttech",
+        "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
+        "workspace": "http://geodados.coffey.com.br/geoserver/ttech/wms"
+      },
+      "colorBg": "#57e886",
+      "colorMn": "#14134d",
+      "colorFn": "#f90644"
     }
   ],
   "company": [
@@ -51,62 +69,6 @@
       "key": "ttech",
       "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
       "workspace": "http://geodados.coffey.com.br/geoserver/ttech/wms"
-    },
-    {
-      "id": 2,
-      "name": "aaaaaa",
-      "key": "aaaaaaa",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "aaaaaa"
-    },
-    {
-      "id": 3,
-      "name": "bbbbb",
-      "key": "bbbbbb",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "bbbbbb"
-    },
-    {
-      "id": 4,
-      "name": "cccccc",
-      "key": "ccccccc",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "cccccc"
-    },
-    {
-      "id": 5,
-      "name": "dddddd",
-      "key": "ddddddd",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "dddddddd"
-    },
-    {
-      "id": 6,
-      "name": "eeeeee",
-      "key": "eeeee",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "eeeeee"
-    },
-    {
-      "id": 7,
-      "name": "fffffff",
-      "key": "ffffff",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "fffffff"
-    },
-    {
-      "id": 8,
-      "name": "gggggg",
-      "key": "gggggg",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "gggggg"
-    },
-    {
-      "id": 9,
-      "name": "hhhhh",
-      "key": "hhhhh",
-      "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-      "workspace": "hhhhhh"
     }
   ],
   "baselayer": [

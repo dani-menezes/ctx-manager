@@ -28,10 +28,8 @@
             </div>
             <div class="col-sm-6 col-xs-12">
                 <ctx-input-container errorMessage="Campo obrigatório" label="Empresa">
-                    <select placeholder="Empresa" class="form-control" formControlName="company" autocomplete="off">
-                        <option *ngFor="let company of companies" [value]="company.id">
-                        {{ company.name }}
-                        <option>
+                    <select placeholder="Empresa" class="form-control" formControlName="company" autocomplete="off ">
+                        <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
                     </select>
                 </ctx-input-container>
             </div>

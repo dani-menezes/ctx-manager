@@ -1,3 +1,6 @@
+.place-info-box {
+    min-height: 95px;
+}
 .place-info-box-content {
     padding: 5px 10px;
     margin-left: 10px;
@@ -24,5 +27,6 @@
     float: left;
 }
 .colorSpan {
-    width: 35px;
+    width: 50px;
+    text-align: center;
 }
