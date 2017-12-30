@@ -1,4 +1,22 @@
 {
+  "user": [
+    {
+      "id": 1,
+      "name": "Daniel",
+      "login": "daniel.menezes",
+      "email": "daniel.menezes@leapmind.com.br",
+      "active": true,
+      "company": {
+        "id": 1,
+        "name": "Leapmind",
+        "key": "leapmind",
+        "workspace": "http://geodados.coffey.com.br/geoserver/leapmind/wms",
+        "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/leapmind/img/logo_background_white.png"
+      },
+      "passwd": "menezes0",
+      "passwdConfirm": "menezes0"
+    }
+  ],
   "context": [
     {
       "id": 1,
@@ -57,14 +75,14 @@
   ],
   "company": [
     {
-      "id": 0,
+      "id": 1,
       "name": "Leapmind",
       "key": "leapmind",
       "workspace": "http://geodados.coffey.com.br/geoserver/leapmind/wms",
       "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/leapmind/img/logo_background_white.png"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Tetra Tech",
       "key": "ttech",
       "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",

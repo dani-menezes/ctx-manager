@@ -17,7 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CompanyComponent } from './companies/company/company.component';
 import { PluginComponent } from './plugins/plugin/plugin.component';
 import { BaselayersComponent } from './baselayers/baselayers.component';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './users/user/user.component';
 import { BaselayerComponent } from './baselayers/baselayer/baselayer.component';
 import { BaselayerDetailComponent } from './baselayers/baselayer-detail/baselayer-detail.component';
 import { PluginsComponent } from './plugins/plugins.component';
@@ -27,6 +27,8 @@ import { CompanyDetailComponent } from './companies/company-detail/company-detai
 import { ContextsComponent } from 'app/contexts/contexts.component';
 import { ContextComponent } from 'app/contexts/context/context.component';
 import { ContextDetailComponent } from 'app/contexts/context-detail/context-detail.component';
+import { UsersComponent } from 'app/users/users.component';
+import { UserDetailComponent } from 'app/users/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { ContextDetailComponent } from 'app/contexts/context-detail/context-deta
     CompanyDetailComponent,
     ContextsComponent,
     ContextComponent,
-    ContextDetailComponent
+    ContextDetailComponent,
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

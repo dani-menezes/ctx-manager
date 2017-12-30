@@ -1,0 +1,82 @@
+<!--INICIO DO CONTEUDO-->
+<section class="content-header">
+  <ol class="breadcrumb ctx-breadcumb">
+      <li><a href="/"><i class="fa fa-home"></i> Context Manager</a></li>
+      <li><a href="/users"><i class="fa fa-user-circle-o"></i> Usuários</a></li>
+      <li class="active"><i class="fa fa-bars"></i> Detalhes</li>
+  </ol>
+</section>
+
+<section class="content">
+  <section class="invoice">
+
+    <form *ngIf="userForm" novalidate [formGroup]="userForm">
+        <div class="row">
+            <div class="col-xs-12">
+              <h2 class="page-header">
+                Informações do Usuário
+              </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 5 caracteres" label="Nome">
+                    <input class="form-control" formControlName="name" autocomplete="off" placeholder="Nome do usuário" />
+                </ctx-input-container>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório" label="Empresa">
+                    <select class="form-control" formControlName="company" autocomplete="off ">
+                        <option *ngFor="let company of companies" [value]="company.id">{{ company.name }}</option>
+                    </select>
+                </ctx-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 8 caracteres" label="Login">
+                    <input class="form-control" formControlName="login" autocomplete="off" placeholder="Login do usuário" />
+                </ctx-input-container>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 8 caracteres" label="Email">
+                    <input type="" class="form-control" formControlName="email" autocomplete="off" placeholder="Email do usuário" />
+                </ctx-input-container>
+            </div>  
+            <div class="col-sm-2 col-xs-12">
+                <ctx-input-container errorMessage="" label="Ativo">
+                    <input class="form-control inactive-button" [ngClass]="{ 'active-button': activeField == 'Ativo' }" formControlName="active" autocomplete="off" (click)="changeActiveValue()" value="{{activeField}}"/>
+                </ctx-input-container>
+            </div>
+        </div>
+        <div *ngIf="userId == 0" class="row" >
+            <div class="col-sm-2 col-xs-12"></div>
+            <div class="col-sm-4 col-xs-12">
+                <ctx-input-container errorMessage="Campo obrigatório e com o mínimo de 8 caracteres" label="Senha">
+                    <input type="password" class="form-control" formControlName="passwd" autocomplete="off" placeholder="Senha" />
+                </ctx-input-container>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <ctx-input-container errorMessage="Não representa o mesmo valor do campo 'Senha'" label="Confirmação da senha">
+                  <input type="password" class="form-control" formControlName="passwdConfirm" autocomplete="off" placeholder="Confirmação da senha" />
+              </ctx-input-container>
+            </div>
+            <div class="col-sm-2 col-xs-12"></div>
+        </div>
+        <div class="row">
+            <input [hidden]="true" formControlName="id"/>
+            <div class="col-xs-12">
+              <h2 class="page-footer">
+                    <button [routerLink]="['/users']" class="btn btn-danger btn-flat pull-left" >
+                        <i class="fa fa-times"></i>&nbsp;&nbsp;Cancelar
+                    </button>  
+                    <button [routerLink]="['/users']" class="btn btn-success btn-flat pull-right" 
+                            [disabled]="!userForm.valid"
+                            (click)="saveOrUpdate(userForm.value)"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Salvar
+                    </button>   
+              </h2>
+            </div>
+        </div>
+    </form>
+  </section>
+</section>

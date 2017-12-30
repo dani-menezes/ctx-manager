@@ -1,0 +1,17 @@
+<ctx-confirm></ctx-confirm>
+<div class="place-info-box" [@userAppeared]="userstate" title="{{user.name}}">
+    <div class="place-info-box-content">
+        <div>
+            <p class="place-info-box-text">{{user.name}} {{user.surname}}
+                <span class="pull-right">
+                    <a [routerLink]="['/user-detail', user.id]" class="ctx-icon-button" title="Editar"><i class="fa fa-pencil"></i></a>
+                    &nbsp;
+                    <a (click)="delete(user.id, user.name)" class="ctx-icon-button" title="Remover"><i class="fa fa-trash"></i></a>
+                </span>
+            </p>
+        </div>
+        <div><p class="place-info-box-attrs">{{user.company.name}}</p></div>
+        <div><p class="place-info-box-attrs">{{user.login}}</p></div>
+        <div><p class="place-info-box-attrs">{{user.active}}</p></div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.active-button {
+    cursor: pointer !important;
+    background-color: green !important;
+    text-align: center !important;
+    color: white !important;
+    font-weight: bold !important;
+    width: 100%;
+}
+.active-button:hover {
+    background-color: rgb(18, 148, 13) !important;
+}
+
+.inactive-button {
+    width: 100%;
+    cursor: pointer;
+    background-color: red;
+    text-align: center !important;
+    color: white !important;
+    font-weight: bold;
+}
+.inactive-button:hover {
+    background-color: rgb(199, 20, 20);
+}
