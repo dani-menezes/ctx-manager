@@ -31,7 +31,7 @@
 
 <section class="content">
   <div class="row">
-    <div *ngFor="let context of this.contexts" class="col-sm-6 col-xs-12">
+    <div *ngFor="let context of this.contexts" class="col-sm-4 col-xs-12">
       <ctx-context (reloadEntities)="this.retrieveEntities()" [context]="context"></ctx-context>
     </div>
     <div *ngIf="this.contexts?.length === 0" class="col-xs-12">

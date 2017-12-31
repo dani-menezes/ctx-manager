@@ -2,10 +2,26 @@
   "user": [
     {
       "id": 1,
-      "name": "Daniel",
+      "name": "Daniel Menezes",
       "login": "daniel.menezes",
       "email": "daniel.menezes@leapmind.com.br",
       "active": true,
+      "company": {
+        "id": 1,
+        "name": "Leapmind",
+        "key": "leapmind",
+        "workspace": "http://geodados.coffey.com.br/geoserver/leapmind/wms",
+        "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/leapmind/img/logo_background_white.png"
+      },
+      "passwd": "menezes0",
+      "passwdConfirm": "menezes0"
+    },
+    {
+      "id": 2,
+      "name": "Teste De Nome Usuários",
+      "login": "teste.usuario",
+      "email": "teste.usuario@gmail.com",
+      "active": false,
       "company": {
         "id": 1,
         "name": "Leapmind",
@@ -63,12 +79,12 @@
       "minY": "1543523452345",
       "company": {
         "id": 1,
-        "name": "Tetra Tech",
-        "key": "ttech",
-        "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/ttech/img/logo_tit.png",
-        "workspace": "http://geodados.coffey.com.br/geoserver/ttech/wms"
+        "name": "Leapmind",
+        "key": "leapmind",
+        "workspace": "http://geodados.coffey.com.br/geoserver/leapmind/wms",
+        "logoPath": "https://s3.amazonaws.com/coffeybr/atlas/company/leapmind/img/logo_background_white.png"
       },
-      "colorBg": "#57e886",
+      "colorBg": "#15b937",
       "colorMn": "#14134d",
       "colorFn": "#f90644"
     }

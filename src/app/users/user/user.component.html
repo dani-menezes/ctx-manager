@@ -2,7 +2,7 @@
 <div class="place-info-box" [@userAppeared]="userstate" title="{{user.name}}">
     <div class="place-info-box-content">
         <div>
-            <p class="place-info-box-text">{{user.name}} {{user.surname}}
+            <p class="place-info-box-text">{{user.name}}
                 <span class="pull-right">
                     <a [routerLink]="['/user-detail', user.id]" class="ctx-icon-button" title="Editar"><i class="fa fa-pencil"></i></a>
                     &nbsp;
@@ -10,8 +10,17 @@
                 </span>
             </p>
         </div>
-        <div><p class="place-info-box-attrs">{{user.company.name}}</p></div>
-        <div><p class="place-info-box-attrs">{{user.login}}</p></div>
-        <div><p class="place-info-box-attrs">{{user.active}}</p></div>
+        <div>
+            <p class="place-info-box-attrs">{{user.company.name}}
+                <span class="pull-right">{{user.email}}</span>
+            </p>
+        </div>
+        <div>
+            <p class="place-info-box-attrs">
+                {{user.login}}
+                <span *ngIf="user.active" class="user-active pull-right">{{user.active?"Ativo":""}}</span>
+                <span *ngIf="!user.active" class="user-inactive pull-right">{{!user.active?"Inativo":""}}</span>
+            </p>
+        </div>
   </div>
 </div>
